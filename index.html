@@ -4,6 +4,8 @@
  <head><link href="https://fonts.googleapis.com/css?family=Libre+Baskerville" rel="stylesheet"> 
        <link href="https://fonts.googleapis.com/css?family=EB+Garamond|Libre+Baskerville" rel="stylesheet">
 	   <link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/d59gibson/website/gh-pages/styles.css">
+	   <script src='https://api.mapbox.com/mapbox-gl-js/v0.36.0/mapbox-gl.js'></script>
+	   <link href='https://api.mapbox.com/mapbox-gl-js/v0.36.0/mapbox-gl.css' rel='stylesheet' />
   <style>
     details {
        font-family: 'Libre Baskerville', serif;
@@ -18,6 +20,14 @@
  <body>
    <div>Currently Under Construction
    </div>
+   <div id='map' style='width: 400px; height: 300px;'></div>
+  <script>
+  mapboxgl.accessToken = 'pk.eyJ1IjoiZGZpZWxkc21lZGZvcmQiLCJhIjoiY2ozbjhsNnF0MDA1ejMybnl3bWU4YThrbCJ9.yB3WjCvwKZd852j3iz76qg';
+  var map = new mapboxgl.Map({
+    container: 'map',
+    style: 'mapbox://styles/mapbox/streets-v10'
+   });
+   </script>
  </body>  
  <footer>
  <details>
