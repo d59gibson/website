@@ -4,8 +4,8 @@
  <head><link href="https://fonts.googleapis.com/css?family=Libre+Baskerville" rel="stylesheet"> 
        <link href="https://fonts.googleapis.com/css?family=EB+Garamond|Libre+Baskerville" rel="stylesheet">
 	   <link rel="stylesheet" type="text/css" href="https://rawgit.com/d59gibson/website/gh-pages/styles.css">
-	   <script src='https://api.mapbox.com/mapbox-gl-js/v0.36.0/mapbox-gl.js'></script>
-	   <link href='https://api.mapbox.com/mapbox-gl-js/v0.36.0/mapbox-gl.css' rel='stylesheet' />
+	   <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.37.0/mapbox-gl.js'></script>
+	   <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.37.0/mapbox-gl.css' rel='stylesheet' />
   <style>
     details {
        font-family: 'Libre Baskerville', serif;
@@ -22,16 +22,18 @@
    </div>
    <div id='map' style='width: 400px; height: 300px;'></div>
   <script>
-  mapboxgl.accessToken = 'pk.eyJ1IjoiZGZpZWxkc21lZGZvcmQiLCJhIjoiY2ozbjhsNnF0MDA1ejMybnl3bWU4YThrbCJ9.yB3WjCvwKZd852j3iz76qg';
-  var map = new mapboxgl.Map({
-    container: 'map',
-    style: 'mapbox://styles/mapbox/streets-v10'
-   });
+	mapboxgl.accessToken = 'pk.eyJ1IjoiZDU5Z2lic29uIiwiYSI6Il9GRWZ1SGcifQ.LYnCIT_afXdoCPc98eMSbw';
+	var map = new mapboxgl.Map({
+    container: 'map', // container id
+    style: 'mapbox://styles/mapbox/light-v9', //hosted style id
+    center: [-71.93, 42.32], // starting position
+    zoom: 3 // starting zoom
+	});
    </script>
  </body>  
  <footer>
  <details>
-   <div>Currently Under Construction
+   <div>Just Some Options
    </div>
  </details>
  </footer>
