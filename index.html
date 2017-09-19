@@ -11,49 +11,32 @@
     <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.38.0/mapbox-gl.css' rel='stylesheet' />
     <style>
         body { margin:0; padding:0; }
-        #map { position:fixed; top:0; width:100%;}
+        #map { position:absolute; top:0; width:100%; height:800px;}
 		
-		ul {
-			list-style-type: none;
-			margin: 0;
-			padding: 0;
+		.navbar {
 			overflow: hidden;
 			background-color: #333;
-			postition: fixed;
+			position: fixed;
 			bottom: 0;
 			width: 100%;
 		}
-
-		li {
+		.navbar a {
 			float: left;
-			border-right:1px solid #bbb;
-		}
-
-		li:last-child {
-			border-right: none;
-		}
-
-		li a {
 			display: block;
-			color: white;
+			color: #f2f2f2;
 			text-align: center;
 			padding: 14px 16px;
 			text-decoration: none;
-		}
-
-		li a:hover:not(.active) {
-			background-color: #111;
+			font-size: 17px;
 		}
     </style>
 </head>
 <body>
 <div id='map'></div>
-<div><ul>
-	<li><a href="https://davidfields.carbonmade.com">About</a></li>
-	<li><a href="https://davidfields.carbonmade.com">Infographics</a></li>
-	<li><a href="https://davidfields.carbonmade.com">Mapping</a></</li>
-</ul>	
-</div>
+<div class='navbar'>
+	<a href="https://davidfields.carbonmade.com">About</a>
+	<a href="https://davidfields.carbonmade.com">Infographics</a>
+	<a href="https://davidfields.carbonmade.com">Mapping</a></div>
 <script>
 mapboxgl.accessToken = 'pk.eyJ1IjoiZGZpZWxkc21lZGZvcmQiLCJhIjoiY2ozbjhsNnF0MDA1ejMybnl3bWU4YThrbCJ9.yB3WjCvwKZd852j3iz76qg';
 var map = new mapboxgl.Map({
