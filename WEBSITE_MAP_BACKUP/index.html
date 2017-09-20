@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<title>Fields+Wolf LLC</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<head>
+    <meta charset='utf-8' />
+    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.38.0/mapbox-gl.js'></script>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.38.0/mapbox-gl.css' rel='stylesheet' />
+	<link href="https://fonts.googleapis.com/css?family=EB+Garamond|IM+Fell+Great+Primer|Merriweather" rel="stylesheet">
+    <style>
+        body { margin:0; padding:0; background-color: #41474B;}
+        #map { position:relative; top:0; min-height: 90%;}
+		
+		.float_center {
+			float: right;
+			position: relative;
+			left: -70%;
+			text-align: left;
+		}
+		.float_center > .child {
+			position: fixed;
+			bottom: 0;
+			left: 30%;
+		}
+		.clear {
+			clear:both;
+		}
+		ul {
+			list-style-type: none;
+			margin:0;
+			padding:15px 0;
+		}
+		ul li {
+			float: left;
+			list-style-type: none;
+			margin: 0 6px;
+		}
+		ul a {
+			display: block;
+			height: 50px;
+			line-height: 40px;
+			text-align: center;
+			color: #f2f2f2;
+			font-size: 48px;
+			font-family: 'IM Fell Great Primer', serif;
+			padding: 0px 45px;
+			background-color: #41474B;
+		}
+		
+		.navbar {
+			overflow: hidden;
+			background-color: #333;
+			position: fixed;
+			bottom: 0;
+			width: 100%;
+		}
+		.navbar a {
+			display: block;
+			display: inline-block;
+			color: #f2f2f2;
+			text-align: center;
+			padding: 14px 16px;
+			text-decoration: none;
+			font-family: 'IM Fell Great Primer', serif;
+			font-size: 40px;
+		}
+    </style>
+</head>
+<body>
+<div><iframe width='100%' height='700' frameBorder='0' src='https://d59gibson.github.io/testweb/'></iframe></div>
+<div class="float_center">
+        <ul class="child">
+          <li><a href="https://davidfields.carbonmade.com">About</a></li>
+          <li><a href="https://davidfields.carbonmade.com">Infographics</a></li>
+          <li><a href="https://davidfields.carbonmade.com">Mapping</a></div></li>
+        </ul>
+        <div class="clear"></div>
+    </div>
+    <div class="clear"></div>
+<script>
+mapboxgl.accessToken = 'pk.eyJ1IjoiZGZpZWxkc21lZGZvcmQiLCJhIjoiY2ozbjhsNnF0MDA1ejMybnl3bWU4YThrbCJ9.yB3WjCvwKZd852j3iz76qg';
+var map = new mapboxgl.Map({
+    container: 'map', // container id
+    style: 'mapbox://styles/dfieldsmedford/cj517x9r013i02so4p7vye82z',
+    center: [-72.0482, 42.1395], // starting position
+    zoom: 8 // starting zoom
+});
+
+// Add zoom and rotation controls to the map.
+map.addControl(new mapboxgl.NavigationControl());
+</script>
+
+</body>
+</html>
+
